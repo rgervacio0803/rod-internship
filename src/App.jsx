@@ -5,7 +5,7 @@ import Author from "./pages/Author";
 import ItemDetails from "./pages/ItemDetails";
 import Nav from "./components/Nav";
 import Footer from "./components/Footer";
-import Hotcollection from "./components/Hotcollection";
+
 
 function App() {
   return (
@@ -16,7 +16,7 @@ function App() {
         <Route path="/explore" element={<Explore />} />
         <Route path="/author" element={<Author />} />
         <Route path="/item-details" element={<ItemDetails />} />
-        <Route path="/Hotcollection:id" element={<Hotcollection />}></Route>
+        
       </Routes>
       <Footer />
     </Router>
