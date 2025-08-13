@@ -20,7 +20,7 @@ const HotCollections = () => {
 
   setTimeout(() => {
     setLoading(false)
-  }, 3000);
+  }, 4000);
 
   return (
     <section id="section-collections" className="no-bottom">
