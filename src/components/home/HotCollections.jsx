@@ -1,9 +1,14 @@
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
 import Slider from "react-slick";
 
-function NextArrow(props) {
+const HotCollections = () => {
+  const [collections, setCollections] = useState([]);
+  const [loading, setLoading] = useState(true);
+  function NextArrow(props) {
   const { onClick } = props;
   return (
     <div
@@ -59,18 +64,16 @@ function PrevArrow(props) {
   );
 }
 
-const HotCollections = () => {
-  const [collections, setCollections] = useState([]);
-  const [loading, setLoading] = useState(true);
+
 
   const settings = {
     dots: true,
     infinite: true,
-    autoplay: true,
+    autoplay: false,
     autoplaySpeed: 3000,
     speed: 600,
     slidesToShow: 4,
-    slidesToScroll: 4,
+    slidesToScroll: 1,
     nextArrow: <NextArrow />,
     prevArrow: <PrevArrow />,
     responsive: [
